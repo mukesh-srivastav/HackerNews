@@ -24,19 +24,11 @@ const list = [
 
 class App extends Component {
   render() {
-    const username = {
-        firstName : "Mukesh",
-        lastName : "Srivastav"
-      };
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React {username.firstName} {username.lastName}</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        {list.map(function(item) {
+          return <div>{item.title}</div>;
+        })}
       </div>
     );
   }
